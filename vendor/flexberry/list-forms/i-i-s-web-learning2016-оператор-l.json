@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-web-learning2016-оператор-e",
+  "editForm": "i-i-s-web-learning2016-оператор-e",
+  "external": false,
+  "caption": "Операторы",
+  "name": "IISWebLearning2016ОператорL",
+  "className": "ОператорL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-web-learning2016-оператор",
+      "modelProjection": "ОператорL"
+    }
+  ]
+}

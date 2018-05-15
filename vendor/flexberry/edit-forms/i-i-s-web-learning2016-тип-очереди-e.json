@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Тип очереди",
+  "name": "IISWebLearning2016ТипОчередиE",
+  "className": "ТипОчередиE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-web-learning2016-тип-очереди",
+      "modelProjection": "ТипОчередиL"
+    }
+  ]
+}

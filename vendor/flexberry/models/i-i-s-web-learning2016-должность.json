@@ -1,0 +1,72 @@
+﻿{
+  "name": "IISWebLearning2016Должность",
+  "modelName": "i-i-s-web-learning2016-должность",
+  "className": "Должность",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "наименование",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "актуально",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ДолжностьE",
+      "modelName": "i-i-s-web-learning2016-должность",
+      "attrs": [
+        {
+          "name": "наименование",
+          "caption": "",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "актуально",
+          "caption": "",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ДолжностьL",
+      "modelName": "i-i-s-web-learning2016-должность",
+      "attrs": [
+        {
+          "name": "наименование",
+          "caption": "",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "актуально",
+          "caption": "",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

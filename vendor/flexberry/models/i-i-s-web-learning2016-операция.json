@@ -1,0 +1,434 @@
+﻿{
+  "name": "IISWebLearning2016Операция",
+  "modelName": "i-i-s-web-learning2016-операция",
+  "className": "Операция",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "должностьОператораСтр",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "представительСтр",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "выполнена",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "оператор",
+      "relatedTo": "i-i-s-web-learning2016-оператор",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "клиент",
+      "relatedTo": "i-i-s-web-learning2016-клиент",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "представительКлиента",
+      "relatedTo": "i-i-s-web-learning2016-клиент",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "видОперации",
+      "relatedTo": "i-i-s-web-learning2016-вид-операции",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "местоВОчереди",
+      "relatedTo": "i-i-s-web-learning2016-место-в-очереди",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ОперацияE",
+      "modelName": "i-i-s-web-learning2016-операция",
+      "attrs": [
+        {
+          "name": "должностьОператораСтр",
+          "caption": "",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "дата",
+          "caption": "",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "выполнена",
+          "caption": "",
+          "hidden": false,
+          "index": 17
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "ВидОперации",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "caption": "Вид операции",
+          "name": "видОперации",
+          "relatedTo": "i-i-s-web-learning2016-вид-операции",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Оператор",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "Оператор.Должность",
+              "belongsTo": [],
+              "hidden": true,
+              "attrs": [
+                {
+                  "name": "наименование",
+                  "caption": "",
+                  "hidden": true,
+                  "index": 6
+                }
+              ],
+              "index": 5,
+              "caption": "",
+              "name": "должность",
+              "relatedTo": "i-i-s-web-learning2016-должность",
+              "inverse": null
+            }
+          ],
+          "hidden": true,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 7,
+          "caption": "",
+          "name": "оператор",
+          "relatedTo": "i-i-s-web-learning2016-оператор",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Клиент",
+          "belongsTo": [],
+          "hidden": true,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "",
+              "hidden": true,
+              "index": 8
+            }
+          ],
+          "index": 9,
+          "caption": "",
+          "name": "клиент",
+          "relatedTo": "i-i-s-web-learning2016-клиент",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "МестоВОчереди",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "МестоВОчереди.Очередь",
+              "belongsTo": [],
+              "hidden": true,
+              "attrs": [
+                {
+                  "name": "наименование",
+                  "caption": "",
+                  "hidden": true,
+                  "index": 13
+                }
+              ],
+              "index": 12,
+              "caption": "",
+              "name": "очередь",
+              "relatedTo": "i-i-s-web-learning2016-очередь",
+              "inverse": null
+            },
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "МестоВОчереди.Клиент",
+              "belongsTo": [],
+              "hidden": true,
+              "attrs": [
+                {
+                  "name": "наименование",
+                  "caption": "",
+                  "hidden": true,
+                  "index": 15
+                }
+              ],
+              "index": 14,
+              "caption": "",
+              "name": "клиент",
+              "relatedTo": "i-i-s-web-learning2016-клиент",
+              "inverse": null
+            }
+          ],
+          "hidden": true,
+          "attrs": [
+            {
+              "name": "номер",
+              "caption": "",
+              "hidden": true,
+              "index": 10
+            },
+            {
+              "name": "очередьСтр",
+              "caption": "",
+              "hidden": true,
+              "index": 11
+            }
+          ],
+          "index": 16,
+          "caption": "",
+          "name": "местоВОчереди",
+          "relatedTo": "i-i-s-web-learning2016-место-в-очереди",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ОперацияL",
+      "modelName": "i-i-s-web-learning2016-операция",
+      "attrs": [
+        {
+          "name": "должностьОператораСтр",
+          "caption": "Должность оператора",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "дата",
+          "caption": "",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "выполнена",
+          "caption": "Выполнена",
+          "hidden": false,
+          "index": 17
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "ВидОперации",
+          "belongsTo": [],
+          "hidden": true,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Вид операции",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "caption": "",
+          "name": "видОперации",
+          "relatedTo": "i-i-s-web-learning2016-вид-операции",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Оператор",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "Оператор.Должность",
+              "belongsTo": [],
+              "hidden": true,
+              "attrs": [
+                {
+                  "name": "наименование",
+                  "caption": "",
+                  "hidden": true,
+                  "index": 6
+                }
+              ],
+              "index": 5,
+              "caption": "",
+              "name": "должность",
+              "relatedTo": "i-i-s-web-learning2016-должность",
+              "inverse": null
+            }
+          ],
+          "hidden": true,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 7,
+          "caption": "",
+          "name": "оператор",
+          "relatedTo": "i-i-s-web-learning2016-оператор",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Клиент",
+          "belongsTo": [],
+          "hidden": true,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "",
+              "hidden": true,
+              "index": 8
+            }
+          ],
+          "index": 9,
+          "caption": "",
+          "name": "клиент",
+          "relatedTo": "i-i-s-web-learning2016-клиент",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "МестоВОчереди",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "МестоВОчереди.Очередь",
+              "belongsTo": [],
+              "hidden": true,
+              "attrs": [
+                {
+                  "name": "наименование",
+                  "caption": "",
+                  "hidden": true,
+                  "index": 13
+                }
+              ],
+              "index": 12,
+              "caption": "",
+              "name": "очередь",
+              "relatedTo": "i-i-s-web-learning2016-очередь",
+              "inverse": null
+            },
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "МестоВОчереди.Клиент",
+              "belongsTo": [],
+              "hidden": true,
+              "attrs": [
+                {
+                  "name": "наименование",
+                  "caption": "",
+                  "hidden": true,
+                  "index": 15
+                }
+              ],
+              "index": 14,
+              "caption": "",
+              "name": "клиент",
+              "relatedTo": "i-i-s-web-learning2016-клиент",
+              "inverse": null
+            }
+          ],
+          "hidden": true,
+          "attrs": [
+            {
+              "name": "номер",
+              "caption": "",
+              "hidden": true,
+              "index": 10
+            },
+            {
+              "name": "очередьСтр",
+              "caption": "",
+              "hidden": true,
+              "index": 11
+            }
+          ],
+          "index": 16,
+          "caption": "",
+          "name": "местоВОчереди",
+          "relatedTo": "i-i-s-web-learning2016-место-в-очереди",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

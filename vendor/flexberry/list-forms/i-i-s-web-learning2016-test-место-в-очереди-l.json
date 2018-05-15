@@ -1,0 +1,15 @@
+﻿{
+  "newForm": null,
+  "editForm": null,
+  "external": false,
+  "caption": null,
+  "name": "IISWebLearning2016TestМестоВОчередиL",
+  "className": "TestМестоВОчередиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-web-learning2016-место-в-очереди",
+      "modelProjection": "МестоВОчередиL"
+    }
+  ]
+}

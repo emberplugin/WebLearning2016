@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-web-learning2016-очередь-e",
+  "editForm": "i-i-s-web-learning2016-очередь-e",
+  "external": false,
+  "caption": "Очереди",
+  "name": "IISWebLearning2016ОчередьL",
+  "className": "ОчередьL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-web-learning2016-очередь",
+      "modelProjection": "ОчередьL"
+    }
+  ]
+}

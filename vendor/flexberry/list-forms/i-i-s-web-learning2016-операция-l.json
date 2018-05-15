@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-web-learning2016-операция-e",
+  "editForm": "i-i-s-web-learning2016-операция-e",
+  "external": false,
+  "caption": "Операции",
+  "name": "IISWebLearning2016ОперацияL",
+  "className": "ОперацияL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-web-learning2016-операция",
+      "modelProjection": "ОперацияL"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Тип",
+      "projection": "ТипОчередиL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Оператор",
+      "projection": "ОператорL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Оператор.Должность",
+      "projection": "",
+      "detailModelName": null
+    },
+    {
+      "master": "клиент",
+      "displayAttributeName": "наименование",
+      "required": false,
+      "relationName": "МестоВОчереди.Клиент",
+      "projection": "КлиентL",
+      "detailModelName": "i-i-s-web-learning2016-место-в-очереди"
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "МестоВОчереди.Очередь",
+      "projection": "ОчередьL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Очередь",
+  "name": "IISWebLearning2016ОчередьE",
+  "className": "ОчередьE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-web-learning2016-очередь",
+      "modelProjection": "ОчередьE"
+    }
+  ]
+}

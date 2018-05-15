@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-web-learning2016-клиент-e",
+  "editForm": "i-i-s-web-learning2016-клиент-e",
+  "external": false,
+  "caption": "Клиенты",
+  "name": "IISWebLearning2016КлиентL",
+  "className": "КлиентL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-web-learning2016-клиент",
+      "modelProjection": "КлиентL"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-web-learning2016-тип-клиента-e",
+  "editForm": "i-i-s-web-learning2016-тип-клиента-e",
+  "external": false,
+  "caption": "Типы клиентов",
+  "name": "IISWebLearning2016ТипКлиентаL",
+  "className": "ТипКлиентаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-web-learning2016-тип-клиента",
+      "modelProjection": "ТипКлиентаL"
+    }
+  ]
+}

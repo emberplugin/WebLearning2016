@@ -1,0 +1,52 @@
+﻿{
+  "name": "IISWebLearning2016ТипОчереди",
+  "modelName": "i-i-s-web-learning2016-тип-очереди",
+  "className": "ТипОчереди",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "наименование",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "актуально",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТипОчередиL",
+      "modelName": "i-i-s-web-learning2016-тип-очереди",
+      "attrs": [
+        {
+          "name": "наименование",
+          "caption": "",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "актуально",
+          "caption": "",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Вид операции",
+  "name": "IISWebLearning2016ВидОперацииE",
+  "className": "ВидОперацииE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-web-learning2016-вид-операции",
+      "modelProjection": "ВидОперацииE"
+    }
+  ]
+}
